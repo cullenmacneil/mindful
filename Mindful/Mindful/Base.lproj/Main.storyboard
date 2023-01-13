@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PFd-AO-dMp">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="z3W-hP-26y">
+            <objects>
+                <tabBarController id="PFd-AO-dMp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gct-GL-Poe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cnN-IO-401" kind="relationship" relationship="viewControllers" id="7BT-Y8-8Ia"/>
+                        <segue destination="Yq7-D9-zCF" kind="relationship" relationship="viewControllers" id="NpE-ZM-9YK"/>
+                        <segue destination="T95-SI-Qoq" kind="relationship" relationship="viewControllers" id="xyZ-Cx-F2g"/>
+                        <segue destination="4in-5k-EIj" kind="relationship" relationship="viewControllers" id="2Tv-1r-kbc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lr6-aJ-fVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="-35"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="NeO-bb-1Sc">
+            <objects>
+                <viewController id="Yq7-D9-zCF" customClass="TimerScreen" customModule="Mindful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DD8-fT-SN6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="167" translatesAutoresizingMaskIntoConstraints="NO" id="MWQ-pt-DHE">
+                                <rect key="frame" x="16" y="463" width="89.666666666666671" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLF-Wg-Opc">
+                                        <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="37"/>
+                                        <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="CancelButtonTapped:" destination="Yq7-D9-zCF" eventType="touchUpInside" id="3jg-g9-Nqb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1k-XV-QUh">
+                                <rect key="frame" x="94.333333333333329" y="189" width="204.66666666666669" height="92"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="80"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vm-lL-Piz">
+                                <rect key="frame" x="242" y="463" width="134.33333333333337" height="37"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start/Pause">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartButtonTapped:" destination="Yq7-D9-zCF" eventType="touchUpInside" id="cGl-DO-MG2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZTe-nb-4gp"/>
+                        <color key="backgroundColor" red="0.57647058819999997" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ZTe-nb-4gp" firstAttribute="bottom" secondItem="MWQ-pt-DHE" secondAttribute="bottom" constant="269" id="2Re-oj-Ctc"/>
+                            <constraint firstItem="ZTe-nb-4gp" firstAttribute="trailing" secondItem="6vm-lL-Piz" secondAttribute="trailing" constant="16.666666666666742" id="2o7-q2-7Wf"/>
+                            <constraint firstItem="MWQ-pt-DHE" firstAttribute="centerX" secondItem="DD8-fT-SN6" secondAttribute="centerX" constant="-135.66666666666669" id="clU-qh-aVp"/>
+                            <constraint firstItem="c1k-XV-QUh" firstAttribute="centerX" secondItem="DD8-fT-SN6" secondAttribute="centerX" id="j9I-os-PFU"/>
+                            <constraint firstItem="c1k-XV-QUh" firstAttribute="top" secondItem="ZTe-nb-4gp" secondAttribute="top" constant="130" id="qaK-eW-tju"/>
+                            <constraint firstItem="6vm-lL-Piz" firstAttribute="top" secondItem="MWQ-pt-DHE" secondAttribute="top" id="yE9-vt-6mL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timer" image="Timer icon" id="5R0-jx-Tfs"/>
+                    <connections>
+                        <outlet property="CancelLabel" destination="cLF-Wg-Opc" id="T8w-51-VqD"/>
+                        <outlet property="StartLabel" destination="6vm-lL-Piz" id="YyE-va-2Xp"/>
+                        <outlet property="TimeLabel" destination="c1k-XV-QUh" id="eGD-jN-Lcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFQ-8E-4ie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147" y="696"/>
+        </scene>
+        <!--Calculator-->
+        <scene sceneID="NYh-sL-30S">
+            <objects>
+                <viewController id="T95-SI-Qoq" customClass="CalculatorScreen" customModule="Mindful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gNW-dE-uOd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE7-je-CiQ">
+                                <rect key="frame" x="16" y="358" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="AC" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="C1z-Od-W48"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOO-ms-thf">
+                                <rect key="frame" x="236" y="359" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="%" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="percentTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="G7k-qK-6UL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk3-rJ-sxQ">
+                                <rect key="frame" x="16" y="442" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="7" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sevenTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="9Hl-yB-vwM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PI-Fn-0EN">
+                                <rect key="frame" x="16" y="521" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="4" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="fourTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="nvF-TI-UwK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg7-6z-Gwe">
+                                <rect key="frame" x="17" y="597" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="1" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="oneTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="yC5-LX-ua4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-lS-rhq">
+                                <rect key="frame" x="122" y="442" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="8" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="eightTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="xcd-vJ-BDH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek4-q8-sJN">
+                                <rect key="frame" x="236" y="442" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="9" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nineTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="XHe-L2-6Gn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGs-fI-3WC">
+                                <rect key="frame" x="322" y="442" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="*" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="multiplyTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="lkP-DP-JFr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrX-7a-wgS">
+                                <rect key="frame" x="122" y="521" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="5" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="fiveTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="fsh-rd-jtQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omX-Xv-m2f">
+                                <rect key="frame" x="236" y="521" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="6" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sixTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="OrS-jo-XUY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQh-P5-eLn">
+                                <rect key="frame" x="322" y="521" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="subtractTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="xZB-sV-e8d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdh-Km-SjS">
+                                <rect key="frame" x="122" y="597" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="2" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="twoTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="Wgt-8r-BZ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-Ab-ma9">
+                                <rect key="frame" x="236" y="597" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="3" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="threeTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="tql-Cq-SB6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4A-lh-byo">
+                                <rect key="frame" x="322" y="597" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="plusTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="QWL-F5-fNT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1P-mW-oaJ">
+                                <rect key="frame" x="241" y="681" width="45" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="." cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="decimalTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="ruy-84-vnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk1-AR-lWU">
+                                <rect key="frame" x="322" y="681" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="=" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="equalTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="sTc-CH-RGo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2+5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y4-4A-WLK">
+                                <rect key="frame" x="29" y="93" width="335" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="50"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnf-fh-Jjc">
+                                <rect key="frame" x="122" y="359" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="⌫" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="fxv-BU-vPF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3C-ou-G0c">
+                                <rect key="frame" x="16" y="681" width="171" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="0" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="zeroTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="nbx-tu-2Hp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqe-fV-czU">
+                                <rect key="frame" x="322" y="359" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="÷" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="divideTap:" destination="T95-SI-Qoq" eventType="touchUpInside" id="vZY-Fd-y1Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJR-Nj-9ck" userLabel="Calculator Answer">
+                                <rect key="frame" x="29" y="206" width="335" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="80"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RkK-lC-37j"/>
+                        <color key="backgroundColor" red="0.57647058819999997" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calculator" image="Calculator icon" id="306-Hh-pEP"/>
+                    <connections>
+                        <outlet property="calculatorAnswer" destination="KJR-Nj-9ck" id="PPO-5C-3JN"/>
+                        <outlet property="calculatorInput" destination="6y4-4A-WLK" id="0bc-YH-rPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sgm-5Y-Zfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893.8931297709923" y="695.77464788732402"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="eNG-xg-bTn">
+            <objects>
+                <viewController id="cnN-IO-401" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0KX-4J-2ac">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veo-xK-B65">
+                                <rect key="frame" x="89" y="72" width="215" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start increaisng your productvity now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8e-c4-Awl">
+                                <rect key="frame" x="54" y="156" width="285" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Lq6-aN-Mdr">
+                                <rect key="frame" x="13.666666666666657" y="238" width="365.66666666666674" height="406"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GLr-tW-zhg"/>
+                        <color key="backgroundColor" red="0.57647058819999997" green="0.75294117650000003" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Veo-xK-B65" firstAttribute="centerX" secondItem="0KX-4J-2ac" secondAttribute="centerX" id="2pV-H4-uij"/>
+                            <constraint firstItem="Lq6-aN-Mdr" firstAttribute="top" secondItem="u8e-c4-Awl" secondAttribute="bottom" constant="61" id="9ha-BP-Z5z"/>
+                            <constraint firstItem="Lq6-aN-Mdr" firstAttribute="centerX" secondItem="u8e-c4-Awl" secondAttribute="centerX" id="cC0-d6-tCr"/>
+                            <constraint firstItem="Veo-xK-B65" firstAttribute="top" secondItem="GLr-tW-zhg" secondAttribute="top" constant="13" id="lqT-69-p0v"/>
+                            <constraint firstItem="GLr-tW-zhg" firstAttribute="bottom" secondItem="Lq6-aN-Mdr" secondAttribute="bottom" constant="125" id="ouQ-q6-Qmv"/>
+                            <constraint firstItem="Lq6-aN-Mdr" firstAttribute="centerX" secondItem="0KX-4J-2ac" secondAttribute="centerX" id="sx7-rO-67t"/>
+                            <constraint firstItem="Lq6-aN-Mdr" firstAttribute="leading" secondItem="GLr-tW-zhg" secondAttribute="leading" constant="13.666666666666657" id="vpy-hm-9PV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home icon" id="SEK-EY-9rC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2D-1E-mEl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="696"/>
+        </scene>
+        <!--To Do-->
+        <scene sceneID="5wL-gL-9tu">
+            <objects>
+                <viewController id="4in-5k-EIj" customClass="ToDoScreen" customModule="Mindful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fe-qC-qPe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BI9-Ys-8ZG">
+                                <rect key="frame" x="132" y="72" width="129" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAu-RP-cUG">
+                                <rect key="frame" x="317" y="84" width="47" height="36"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="AddButtonClicked:" destination="4in-5k-EIj" eventType="touchDown" id="EaS-e8-n6C"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zw3-ms-vkc">
+                                <rect key="frame" x="0.0" y="139" width="393" height="630"/>
+                                <color key="backgroundColor" red="0.57532081499999999" green="0.75221194010000003" blue="0.61989480269999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="630" id="Wx5-PC-24V"/>
+                                </constraints>
+                                <color key="separatorColor" name="Mint"/>
+                                <color key="sectionIndexColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.57647061349999995" green="0.75294119120000003" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="v3q-Dv-doX">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v3q-Dv-doX" id="pjD-dw-UuH">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" red="0.066666666669999999" green="0.3294117647" blue="0.45098039220000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.57532081499999999" green="0.75221194010000003" blue="0.61989480269999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lpu-PL-5JF"/>
+                        <color key="backgroundColor" red="0.57647061349999995" green="0.75294119120000003" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zw3-ms-vkc" firstAttribute="leading" secondItem="lpu-PL-5JF" secondAttribute="leading" id="2H0-WW-w80"/>
+                            <constraint firstItem="Zw3-ms-vkc" firstAttribute="top" secondItem="BI9-Ys-8ZG" secondAttribute="bottom" constant="7" id="3rp-sM-Ycq"/>
+                            <constraint firstItem="Zw3-ms-vkc" firstAttribute="top" secondItem="BI9-Ys-8ZG" secondAttribute="bottom" constant="7" id="MJB-ul-Er1"/>
+                            <constraint firstItem="LAu-RP-cUG" firstAttribute="centerY" secondItem="BI9-Ys-8ZG" secondAttribute="centerY" id="Odp-FV-S2g"/>
+                            <constraint firstItem="Zw3-ms-vkc" firstAttribute="centerX" secondItem="BI9-Ys-8ZG" secondAttribute="centerX" id="dA7-Yn-mh7"/>
+                            <constraint firstItem="LAu-RP-cUG" firstAttribute="leading" secondItem="BI9-Ys-8ZG" secondAttribute="trailing" constant="56" id="dQK-os-XDy"/>
+                            <constraint firstItem="LAu-RP-cUG" firstAttribute="top" secondItem="lpu-PL-5JF" secondAttribute="top" constant="25" id="fpH-th-BfC"/>
+                            <constraint firstItem="lpu-PL-5JF" firstAttribute="trailing" secondItem="LAu-RP-cUG" secondAttribute="trailing" constant="29" id="gER-Bj-1go"/>
+                            <constraint firstItem="Zw3-ms-vkc" firstAttribute="bottom" secondItem="lpu-PL-5JF" secondAttribute="bottom" id="rIq-Fg-eeC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="To Do" image="To do Icon" id="D8L-3I-ifu"/>
+                    <connections>
+                        <outlet property="Table" destination="Zw3-ms-vkc" id="eYI-YL-jEq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTq-Zc-zCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2727" y="696"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Calculator icon" width="32" height="32"/>
+        <image name="Home icon" width="32" height="32"/>
+        <image name="Image" width="366" height="406"/>
+        <image name="Timer icon" width="32" height="32"/>
+        <image name="To do Icon" width="32" height="32"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="Mint">
+            <color red="0.57599997520446777" green="0.75300002098083496" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
